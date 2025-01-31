@@ -17,11 +17,14 @@ class User extends Authenticatable
      *
      * @var list<string>
      */
-    protected $fillable = [
-        'name',
-        'email',
-        'password',
-    ];
+    // protected $fillable = [
+    //     'name',
+    //     'email',
+    //     'password',
+    // ];
+
+    // 이렇게 하면 모든 필드를 대량할당을 하겠다는 의미 (원래는 보안적인 이슈로 하면 안됨)
+    protected $guarded = [];
 
     /**
      * The attributes that should be hidden for serialization.
